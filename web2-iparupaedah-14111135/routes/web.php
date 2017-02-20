@@ -1,5 +1,5 @@
 <?php
-
+use App\Mahasiswa;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/', 'show@index');
+Route::get('/tambah', function () {
+	$mahasiswa = new mahasiswa;
+	$mahasiswa -> nama ="Ipa Rupaedah";
+	$mahasiswa -> nim = "14111135";
+	$mahasiswa -> alamat ="Majalaya";
+$mahasiswa -> save ();});
+
