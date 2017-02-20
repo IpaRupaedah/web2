@@ -34,3 +34,16 @@ Route :: get ('/hapus', function ()
 	$mahasiswa= Mahasiswa::find(1);
 	$mahasiswa -> delete();
 });
+Route::get('/tampil', function()
+{
+	$mahasiswa = Mahasiswa ::all();
+	foreach ($mahasiswa as $mhs)
+	{
+echo "<br><b>Nama</b>:";
+echo $mhs ->nama;
+echo"<br> <b>NIM</b>:";
+echo $mhs ->nim;
+echo "<br> <b> Alamat</b> :";
+echo $mhs ->alamat;
+	}
+});
